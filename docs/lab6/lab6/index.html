@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://github.com/MatthiasEschhold/hexagonal-and-clean-architecture-training/docs/old/lab2/">
+        <link rel="canonical" href="https://github.com/MatthiasEschhold/hexagonal-and-clean-architecture-training/docs/lab6/lab6/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Adapter Ring - Implementierung des Ports & Adapters Pattern - hexagonal-and-clean-architecture-training</title>
+        <title>Aufgabe 6 Automatiserte Governance mittels Fitness Functions für strukturelle Qualität - hexagonal-and-clean-architecture-training</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#input-adapter" class="md-skip">
+        <a href="#lernziele" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Adapter Ring - Implementierung des Ports &amp; Adapters Pattern
+              Aufgabe 6 Automatiserte Governance mittels Fitness Functions für strukturelle Qualität
             
           </span>
         </div>
@@ -410,18 +410,90 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#input-adapter" class="md-nav__link">
+  <a href="#lernziele" class="md-nav__link">
     <span class="md-ellipsis">
-      Input Adapter
+      Lernziele
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#output-adapter" class="md-nav__link">
+  <a href="#aufgabe-50-fachliche-modularisierung" class="md-nav__link">
     <span class="md-ellipsis">
-      Output Adapter
+      Aufgabe 5.0 Fachliche Modularisierung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgabe-51-anwendungsfall-werkstattauftrag-anlegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aufgabe 5.1 Anwendungsfall Werkstattauftrag anlegen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aufgabe 5.1 Anwendungsfall Werkstattauftrag anlegen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schnittstellenbeschreibung-fahrzeugdaten-abfragen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schnittstellenbeschreibung Fahrzeugdaten abfragen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schnittstellenbeschreibung Fahrzeugdaten abfragen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fahrzeugdaten-die-im-werkstattauftrag-benotigt-werden" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fahrzeugdaten die im Werkstattauftrag benötigt werden
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgabe-52-anwendungsfall-fahrzeugstammdaten-abfragen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aufgabe 5.2 Anwendungsfall Fahrzeugstammdaten abfragen
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aufgabe 5.2 Anwendungsfall Fahrzeugstammdaten abfragen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schnittstellenbeschreibung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schnittstellenbeschreibung
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgabe-53-weitere-muster-fur-abhangigkeiten-zwischen-domain-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aufgabe 5.3 Weitere Muster für Abhängigkeiten zwischen Domain Modules
     </span>
   </a>
   
@@ -467,7 +539,7 @@
 <!-- Actions -->
 
   
-    <a href="https://github.com/MatthiasEschhold/hexagonal-and-clean-architecture-training.git/edit/develop/documentation/docs/docs/old/lab2.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/MatthiasEschhold/hexagonal-and-clean-architecture-training.git/edit/develop/documentation/docs/docs/lab6/lab6.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -476,7 +548,7 @@
     
       
     
-    <a href="https://github.com/MatthiasEschhold/hexagonal-and-clean-architecture-training.git/raw/develop/documentation/docs/docs/old/lab2.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/MatthiasEschhold/hexagonal-and-clean-architecture-training.git/raw/develop/documentation/docs/docs/lab6/lab6.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
@@ -489,109 +561,106 @@
 -->
 
 <!---->
-<!--<h1>Adapter Ring - Implementierung des Ports &amp; Adapters Pattern</h1>-->
+<!--<h1>Aufgabe 6 Automatiserte Governance mittels Fitness Functions für strukturelle Qualität</h1>-->
 <!---->
 
 <!-- Page content -->
-<h1 id="adapter-ring-implementierung-des-ports-adapters-pattern">Adapter Ring - Implementierung des Ports &amp; Adapters Pattern<a class="headerlink" href="#adapter-ring-implementierung-des-ports-adapters-pattern" title="Permanent link">⚓︎</a></h1>
-<h2 id="input-adapter">Input Adapter<a class="headerlink" href="#input-adapter" title="Permanent link">⚓︎</a></h2>
-<details>
-   <summary>Coding Task 3</summary>
-
-<b>Erstelle einen Input Adapter für den eingehenden Use Case</b>
-<br/>
-<ol>
-<li>Erstelle das Package <i>adapter.in</i> als Subpackage von <i>vehicle</i> und erstelle den Interface Adapter <i>VehicleController</i></li>
-<li>Implementiere die technische HTTP Schnittstelle zur Anlage eines Fahrzeugs und nutze hierfür den Use Case <i>VehicleCommand</i></li>
-<li>Erstelle das DTO <i>VehicleResource</i> (siehe Vorlage) und ein Mapper (<i>VehicleWebMapper</i>) für das DTO</li>
-<li>Ignoriere Details des Frameworks und des REST Architekturstils bei der Implementierung</li>
-
-</ol>
-
-<details>
-      <summary>VehicleResource</summary>
-
-   ```java
-public class VehicleResource {
-
-    private String vin;
-    private VehicleMotionDataResource vehicleMotionData;
-    private VehicleMasterDataResource vehicleMasterData;
-
-    public VehicleMasterDataResource getVehicleMasterData() {
-        return vehicleMasterData;
-    }
-
-    public void setVehicleMasterData(VehicleMasterDataResource vehicleMasterData) {
-        this.vehicleMasterData = vehicleMasterData;
-    }
-
-    public String getVin() {
-        return vin;
-    }
-
-    public void setVin(String vin) {
-        this.vin = vin;
-    }
-
-    public VehicleMotionDataResource getVehicleMotionData() {
-        return vehicleMotionData;
-    }
-
-    public void setVehicleMotionData(VehicleMotionDataResource vehicleMotionData) {
-        this.vehicleMotionData = vehicleMotionData;
-    }
-}
-
-   ```
-</details>
-
-</details>
-
-<h2 id="output-adapter">Output Adapter<a class="headerlink" href="#output-adapter" title="Permanent link">⚓︎</a></h2>
-<details>
-   <summary>Coding Task 4</summary>
-
-<b>Erstelle die Output Adapter für die ausgehenden Use Cases</b>
-<br/>
-<ol>
-<li>Erstelle das Package <i>adapter.out</i> als Subpackage von <i>vehicle</i></li> und erstelle das Datenbank Repository <i>VehicleDbRepository</i></li>
-<li>Implementiere den Use Case <i>VehicleRepository</i></li>
-<li>Führe das DTO <i>VehicleDbEntity</i> (siehe Vorlage) sowie den Mapper <i>VehicleDbMapper</i> ein</li>
-<li>Ignoriere Details des Frameworks bei der Implementierung</li>
-
-</ol>
-
-<details>
-      <summary>VehicleDbEntity</summary>
-
-   ```java
-public class VehicleDbEntity {
-
-    private String vin;
-    private String licensePlate;
-
-    public String getVin() {
-        return vin;
-    }
-
-    public void setVin(String vin) {
-        this.vin = vin;
-    }
-
-    public String getLicensePlate() {
-        return licensePlate;
-    }
-
-    public void setLicensePlate(String licensePlate) {
-        this.licensePlate = licensePlate;
-    }
-}
-
-   ```
-   </details>
-
-</details>
+<h1 id="aufgabe-6-automatiserte-governance-mittels-fitness-functions-fur-strukturelle-qualitat">Aufgabe 6 Automatiserte Governance mittels Fitness Functions für strukturelle Qualität<a class="headerlink" href="#aufgabe-6-automatiserte-governance-mittels-fitness-functions-fur-strukturelle-qualitat" title="Permanent link">⚓︎</a></h1>
+<h2 id="lernziele">Lernziele<a class="headerlink" href="#lernziele" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Strukturtest in der Clean Architecture verstehen und anwenden</li>
+<li>ArchUnit als leichtgewichtiges Tool für Fitness Functions der strukturellen Qualität</li>
+<li></li>
+</ul>
+<h2 id="aufgabe-50-fachliche-modularisierung">Aufgabe 5.0 Fachliche Modularisierung<a class="headerlink" href="#aufgabe-50-fachliche-modularisierung" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Betrachte die Module GarageOrder und SpareParts</li>
+</ul>
+<h2 id="aufgabe-51-anwendungsfall-werkstattauftrag-anlegen">Aufgabe 5.1 Anwendungsfall Werkstattauftrag anlegen<a class="headerlink" href="#aufgabe-51-anwendungsfall-werkstattauftrag-anlegen" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Für die Anlage eines Werkstattauftrags im Modul <em>GarageOrder</em> werden die <em>Vin</em>, 
+das <em>Kennzeichen (LicensePlate)</em> und der aktuelle <em>Kilometerstand (Mileage)</em> des Fahrzeugs benötigt</li>
+<li>Die Abfrage muss anhand des <em>Kennzeichens</em> oder der <em>Fahrgestellnummer</em> möglich sein</li>
+<li>Implementiere ein Muster deiner Wahl, um die Abhängigkeit zwischen dem Domain Module 
+<em>GarageOrder</em> und dem Domain Module  <em>Vehicle</em> zu implementieren</li>
+</ul>
+<h3 id="schnittstellenbeschreibung-fahrzeugdaten-abfragen">Schnittstellenbeschreibung Fahrzeugdaten abfragen<a class="headerlink" href="#schnittstellenbeschreibung-fahrzeugdaten-abfragen" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schnittstellenelement</th>
+<th>Domänenobjekte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parameter</td>
+<td>Vin</td>
+</tr>
+<tr>
+<td>Rückgabe</td>
+<td>VehicleData</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Schnittstellenelement</th>
+<th>Domänenobjekte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parameter</td>
+<td>LicensePlate</td>
+</tr>
+<tr>
+<td>Rückgabe</td>
+<td>VehicleData</td>
+</tr>
+</tbody>
+</table>
+<h4 id="fahrzeugdaten-die-im-werkstattauftrag-benotigt-werden">Fahrzeugdaten die im Werkstattauftrag benötigt werden<a class="headerlink" href="#fahrzeugdaten-die-im-werkstattauftrag-benotigt-werden" title="Permanent link">⚓︎</a></h4>
+<div class="highlight"><pre><span></span><code><span class="n">VehicleData</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">licensePlate</span><span class="p">:</span><span class="w"> </span><span class="n">String</span>
+<span class="w">    </span><span class="n">vin</span><span class="p">:</span><span class="w"> </span><span class="n">String</span>
+<span class="w">    </span><span class="n">mileage</span><span class="p">:</span><span class="w"> </span><span class="kt">double</span><span class="w">        </span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="aufgabe-52-anwendungsfall-fahrzeugstammdaten-abfragen">Aufgabe 5.2 Anwendungsfall Fahrzeugstammdaten abfragen<a class="headerlink" href="#aufgabe-52-anwendungsfall-fahrzeugstammdaten-abfragen" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Die Ersatzteileverwaltung (Modul <em>SpareParts</em>) benötigt Fahrzeugstammdaten</li>
+<li>Die Abfrage muss anhand der <em>Fahrgestellnummer</em> möglich sein</li>
+<li>Implementiere ein Muster deiner Wahl, um die Abhängigkeit zwischen dem Domain Module
+  <em>SpareParts</em> und dem Domain Module <em>Vehicle</em> zu implementieren</li>
+</ul>
+<h3 id="schnittstellenbeschreibung">Schnittstellenbeschreibung<a class="headerlink" href="#schnittstellenbeschreibung" title="Permanent link">⚓︎</a></h3>
+<table>
+<thead>
+<tr>
+<th>Schnittstellenelement</th>
+<th>Domänenobjekte</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parameter</td>
+<td>Vin</td>
+</tr>
+<tr>
+<td>Rückgabe</td>
+<td>VehicleMasterData</td>
+</tr>
+</tbody>
+</table>
+<h2 id="aufgabe-53-weitere-muster-fur-abhangigkeiten-zwischen-domain-modules">Aufgabe 5.3 Weitere Muster für Abhängigkeiten zwischen Domain Modules<a class="headerlink" href="#aufgabe-53-weitere-muster-fur-abhangigkeiten-zwischen-domain-modules" title="Permanent link">⚓︎</a></h2>
+<ul>
+<li>Diskutiere in der Gruppe oder analysiere für dich, wann ein <em>Shared Output Adapter Pattern</em> oder <em>Supporting Service Pattern</em> eine gute alternative sein kann</li>
+</ul>
+<p>Optional:
+- Implementiere die Szenarien 5.1 und 5.2 mit einem  <em>Shared Output Adapter Pattern</em>
+- Implementiere die Szenarien 5.1 und 5.2 mit einem <em>Supporting Service Pattern</em></p>
 
 <!-- Source file information -->
 
