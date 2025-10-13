@@ -15,18 +15,18 @@
  ![Vehicle Domain Model](../img/vehicle-domain-model.png)
  Abb 1: Vehicle Domain Model
 
-| Domänenobjekt     | Validierungsregel und Verhalten                                                                                                                                                                                                |
-|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Vehicle           | Die Eigenschaften Vin, LicensePlate und Mileage müssen bei einer initialen Fahrzeuganlage immer vorhanden sein. Der MileageRecord sowie das RecordDate werden im Erzeugungsprozess auf Basis des übergebenen Mileage erstellt. |
-| Vin               | Ein valider Wert muss dem vorgesehenen Pattern folgen.                                                                                                                                                                         |
-| LicensePlate      | Ein valider Wert muss dem vorgesehenen Pattern folgen.                                                                                                                                                                         |
-| Mileage           | Der Kilometerstand muss größer 0 sein.                                                                                                                                                                                         |
-| MileageRecord     | Keine Nullwerte.                                                                                                                                                                                                               |
-| RecordDate        | Kein Nullwert.                                                                                                                                                                                                                 |
-| VehicleMasterData | Die Eigenschaften CountryOfManufacture und Equipment müssen bei einer initialen Fahrzeuganlage immer vorhanden sein.                                                                                                           |
-| Equipment         | Keine Nullwerte.                                                                                                                                                                                                               |
-| EquipmentCode     | Ein valider Wert muss dem vorgesehenen Pattern folgen.                                                                                                                                                                         |
-| EquipmentLabel    | Ein valider Wert muss dem vorgesehenen Pattern folgen.                                                                                                                                                                         |
+| Domänenobjekt     | Validierungsregel und Verhalten                                                                                                                                                         |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Vehicle           | Die Eigenschaften Vin, LicensePlate und Mileage müssen bei einer initialen Fahrzeuganlage immer vorhanden sein. Das Datum der Kilometerstandsmeldung wird innerhalb der Domäne erzeugt. |
+| Vin               | Ein valider Wert muss dem vorgesehenen Pattern folgen.                                                                                                                                  |
+| LicensePlate      | Ein valider Wert muss dem vorgesehenen Pattern folgen.                                                                                                                                  |
+| Mileage           | Der Kilometerstand muss größer 0 sein.                                                                                                                                                  |
+| MileageRecord     | Keine Nullwerte.                                                                                                                                                                        |
+| RecordDate        | Kein Nullwert.                                                                                                                                                                          |
+| VehicleMasterData | Die Eigenschaften CountryOfManufacture und Equipment müssen bei einer initialen Fahrzeuganlage immer vorhanden sein.                                                                    |
+| Equipment         | Keine Nullwerte.                                                                                                                                                                        |
+| EquipmentCode     | Ein valider Wert muss dem vorgesehenen Pattern folgen.                                                                                                                                  |
+| EquipmentLabel    | Ein valider Wert muss dem vorgesehenen Pattern folgen.                                                                                                                                  |
 
 ### Regex Pattern für das Value Object Vin
 
@@ -82,10 +82,10 @@ Beispiele:
 
 ## Aufgabe 1.2 Rich Domain Model - Verhalten am Domänenobjekt
 
-Implementiere die Aktualisierung des Kilometerstandes (Mileage) mit Plausibilitätsprüfung.
+Implementiere die Aktualisierung des Kilometerstandes mit Plausibilitätsprüfung. 
+Dabei gilt das gleiche, wie bei der Fahrzeuganlage. Das Datum der Kilometerstandsmeldung wird innerhalb der Domäne erzeugt.
+Wir möchten aus fachlicher Sicht verhindern, dass Kilometerstandmeldungen rückwirkend durchgeführt werden können.
 
-> Besonderheit:
-> Das Erfassungsdatum (RecordDate) wird automatisch vergeben (als Verhalten am Domänenobjekt).
 
 ### Plausibilitätsprüfung für den Kilometerstand
 

@@ -93,24 +93,24 @@ Diese Regelung gilt für alle Übungsaufgaben ab Aufgabe 2.
 
 #### Anwendungsfall-spezifische Regel "Risk Score >=50"
 
-**_WENN_** der RisikScore **>= 50** ist, **_DANN_** führe eine Diebstahlstatusabfrage bei Interpol durch.
+**_WENN_** der **RiskScore >= 50** ist, **_DANN_** führe eine Diebstahlstatusabfrage bei Interpol durch.
 
 ### Aufgabe
 
 - Führe die notwendigen ein- und ausgehende Use Cases ein
   - Entscheide dich für einen Use-Case-Schnitt (mit Begründung)
-- Erstelle das Package _vehicle.domain.service_ und erstelle den DomainService für die Ermittlung des Risikoscore
+- Erstelle das Package _vehicle.domain.service_ und erstelle den Domain Service für die Ermittlung des RiskScore
   - Welche neuen Domänenobjekte werden benötigt und wie können diese im Package-Baum eingeordnet werden?
   - Es ist alles erlaubt: Umbenennen, verschieben, neues Packages, etc.
 - Erweitere den Unit-Test für den Interactor des Anwendungsfalls "Fahrzeug anlegen"
-- Schreibe einen Unit-Test für den DomainService für die Ermittlung des Risikoscore
+- Schreibe einen Unit-Test für den Domain Service für die Ermittlung des RiskScore
 
 ### Ablauf (Flow of Control) des Anwendungsfalls (Happy Path)
 
 - Ermittlung des Risikoscore
 - Auswertung des Risikoscore und bei Bedarf Abfrage des Diebstahlstatus
 - Abfrage der Fahrzeugdaten bei einem externen Service anhand der Vin
-- Erstellung des Fahrzeugs und der intialen Kilometerstandsmeldung
+- Erstellung des Fahrzeugs und der initialen Kilometerstandsmeldung
 - Speichern des Fahrzeugs
 
 ### Externe Schnittstellen
@@ -138,13 +138,16 @@ public TheftStatusRequestResponse {
 }
 ```
 
-### Hilfestellung für die Implementierung
+### Methode zur Ermittlung des Registrierungsland anhand des Kennzeichens
 
-#### Methode zur Ermittlung des Registrierungsland anhand des Kennzeichens
+Nutze diesen Domain Service, der viel Magie enthält, zur Ermittlung des Registrierungslandes anhand des Kennzeichens.
 
 ```java
-private CountryCode detectRegistrationCountry(LicensePlate licensePlate) {
-  // magic...
-  return new CountryCode("DE");
+public class DetectRegistrationCountryService {
+
+    public CountryCode detect(LicensePlate licensePlate) {
+        return new CountryCode("DE");
+    }
 }
+
 ```

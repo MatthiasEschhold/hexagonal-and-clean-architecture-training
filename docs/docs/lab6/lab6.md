@@ -1,11 +1,10 @@
-# Aufgabe 5 Fachliche Modularisierung anhand Root Entities
+# Aufgabe 6 Automatiserte Governance mittels Fitness Functions für strukturelle Qualität
 
 ## Lernziele
 
-- Fachliche Modularisierung anhand von Root Entities verstehen und anwenden können
-- Erfahren, wie das System in der Clean Architecture wächst und erweitert wird
-- Strategien für die Behandlung von Abhängigkeiten zwischen Root Entities verstehen
-
+- Strukturtest in der Clean Architecture verstehen und anwenden
+- ArchUnit als leichtgewichtiges Tool für Fitness Functions der strukturellen Qualität
+- 
 ## Aufgabe 5.0 Fachliche Modularisierung
 
 - Betrachte die Module GarageOrder und SpareParts
