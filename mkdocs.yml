@@ -57,4 +57,5 @@ nav:
   - Aufgabe 3 Implementierung der Interface Adapters: 'docs/lab3/lab3.md'
   - Aufgabe 4 Weitere Anwendungsfälle: 'docs/lab4/lab4.md'
   - Aufgabe 5 Fachliche Modularisierung bei Systemwachstum: 'docs/lab5/lab5.md'
+  - Aufgabe 6 Automatisierte Governance mittels Fitness Functions: 'docs/lab6/lab6.md'
   - Git Utils: 'docs/help/git.md'
