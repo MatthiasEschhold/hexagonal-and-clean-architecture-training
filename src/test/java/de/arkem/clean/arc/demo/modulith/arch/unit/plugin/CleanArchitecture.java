@@ -12,10 +12,9 @@ import java.util.*;
 
 public final class CleanArchitecture implements ArchRule {
 
-    public static final String IGNORED_PACKAGES = "ignored.packages";
     private static final String DOMAIN_MODEL = "domain.model";
     private static final String DOMAIN_SERVICE = "domain.service";
-    private static final String APPLICATION_SERVICE = "application.service";
+    private static final String USECASE_INTERACTOR = "usecase.interactor";
     private static final String ADAPTER_OUT = "adapter.out";
     private static final String ADAPTER_IN = "adapter.in";
     private static final String USECASE_IN = "usecase.in";
@@ -23,36 +22,46 @@ public final class CleanArchitecture implements ArchRule {
     private static final String DOMAIN = "domain";
     private static final String USECASE = "usecase";
     private static final String ADAPTER = "adapter";
-    private static final String APPLICATION = "application";
+    public static final String IGNORED_PACKAGES = "ignored.packages";
+    //dependency patterns
     private static final String SHARED_KERNEL_PATTERN = "shared.kernel";
     private static final String SHARED_OUTPUT_ADAPTER_PATTERN = "shared.output.adapter";
     private static final String SUPPORTING_SERVICE_PATTERN = "supporting.service";
-    private static final String EVENT_DRIVEN_PATTERN = "event.driven.dependency";
-    private static final String SERVICE_DECORATOR_PATTERN = "service.decorator";
+    private static final String EVENTS_PATTERN = "events";
     private static final String ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN = "adapter.out.usecase.in";
+    private static final String APPLICATION_SERVICE_PATTERN = "application.service";
     private Optional<String> overriddenDescription;
+
     private String domainModelPackageIdentifier;
     private String domainServicePackageIdentifier;
-    private String applicationServicePackageIdentifier;
+    private String usecaseInteractorPackageIdentifier;
     private String adapterInPackageIdentifier;
     private String adapterOutPackageIdentifier;
     private String useCaseInPackageIdentifier;
     private String useCaseOutPackageIdentifier;
+
     private String useCasePackageIdentifier;
     private String adapterPackageIdentifier;
     private String domainPackageIdentifier;
-    private String applicationPackageIdentifier;
     private Map<String, String> adapterPackageIdentifiers;
+
+    //dependency
     private List<String> sharedOutputAdapter;
-    private List<String> serviceDecorator;
     private List<String> supportingService;
+    private List<String> sharedKernel;
+    private List<String> events;
+    private List<String> applicationService;
+
     private boolean optionalLayers;
+
+    //check styles
     private boolean allRingsDeepCheck;
     private List<IgnoredDependency> ignoredDependencies;
     private List<String> ignoredPackageIdentifiers;
-    private List<String> adapterOutOfAdapterOutUseCaseInPattern;
+    private List<String> adapterOutOfAdapterOutUseCaseIn;
+
+    //clean arc pattern template
     private CleanArchitectureCheck check;
-    private List<String> sharedKernel;
 
     /**
      * @deprecated Use {@link #cleanArchitecture(CleanArchitectureCheck)} instead
@@ -61,7 +70,7 @@ public final class CleanArchitecture implements ArchRule {
         this.check = check;
         this.domainModelPackageIdentifier = DOMAIN_MODEL;
         this.domainServicePackageIdentifier = DOMAIN_SERVICE;
-        this.applicationServicePackageIdentifier = APPLICATION_SERVICE;
+        this.usecaseInteractorPackageIdentifier = USECASE_INTERACTOR;
         this.adapterInPackageIdentifier = ADAPTER_IN;
         this.adapterOutPackageIdentifier = ADAPTER_OUT;
         this.useCaseInPackageIdentifier = USECASE_IN;
@@ -69,7 +78,6 @@ public final class CleanArchitecture implements ArchRule {
         this.useCasePackageIdentifier = USECASE;
         this.domainPackageIdentifier = DOMAIN;
         this.adapterPackageIdentifier = ADAPTER;
-        this.applicationPackageIdentifier = APPLICATION;
         this.adapterPackageIdentifiers = new LinkedHashMap<>();
         this.optionalLayers = true;
         this.ignoredDependencies = new ArrayList();
@@ -77,8 +85,9 @@ public final class CleanArchitecture implements ArchRule {
         this.ignoredPackageIdentifiers = new ArrayList<>();
         this.sharedOutputAdapter = new ArrayList<>();
         this.supportingService = new ArrayList<>();
-        this.serviceDecorator = new ArrayList<>();
-        this.adapterOutOfAdapterOutUseCaseInPattern = new ArrayList<>();
+        this.events = new ArrayList<>();
+        this.applicationService = new ArrayList<>();
+        this.adapterOutOfAdapterOutUseCaseIn = new ArrayList<>();
         this.sharedKernel = new ArrayList<>();
     }
 
@@ -86,7 +95,7 @@ public final class CleanArchitecture implements ArchRule {
                               Optional<String> overriddenDescription,
                               String domainModelPackageIdentifier,
                               String domainServicePackageIdentifier,
-                              String applicationServicePackageIdentifier,
+                              String usecaseInteractorPackageIdentifier,
                               String adapterInPackageIdentifier,
                               String adapterOutPackageIdentifier,
                               String useCaseInPackageIdentifier,
@@ -94,22 +103,20 @@ public final class CleanArchitecture implements ArchRule {
                               String useCasePackageIdentifier,
                               String adapterPackageIdentifier,
                               String domainPackageIdentifier,
-                              String applicationPackageIdentifier,
                               Map<String, String> adapterPackageIdentifiers,
                               boolean optionalLayers,
                               boolean allRingsDeepCheck,
                               List<IgnoredDependency> ignoredDependencies,
                               List<String> sharedOutputAdapter,
                               List<String> ignoredPackageIdentifiers,
-                              List<String> serviceDecorator,
                               List<String> supportingService,
-                              List<String> adapterOutOfAdapterOutUseCaseInPattern,
+                              List<String> adapterOutOfAdapterOutUseCaseIn,
                               List<String> sharedKernel) {
         this(check);
         this.overriddenDescription = overriddenDescription;
         this.domainModelPackageIdentifier = domainModelPackageIdentifier;
         this.domainServicePackageIdentifier = domainServicePackageIdentifier;
-        this.applicationServicePackageIdentifier = applicationServicePackageIdentifier;
+        this.usecaseInteractorPackageIdentifier = usecaseInteractorPackageIdentifier;
         this.adapterInPackageIdentifier = adapterInPackageIdentifier;
         this.adapterOutPackageIdentifier = adapterOutPackageIdentifier;
         this.useCaseInPackageIdentifier = useCaseInPackageIdentifier;
@@ -121,12 +128,10 @@ public final class CleanArchitecture implements ArchRule {
         this.optionalLayers = optionalLayers;
         this.allRingsDeepCheck = allRingsDeepCheck;
         this.ignoredDependencies = ignoredDependencies;
-        this.applicationPackageIdentifier = applicationPackageIdentifier;
         this.sharedOutputAdapter = sharedOutputAdapter;
         this.ignoredPackageIdentifiers = ignoredPackageIdentifiers;
-        this.serviceDecorator = serviceDecorator;
         this.supportingService = supportingService;
-        this.adapterOutOfAdapterOutUseCaseInPattern = adapterOutOfAdapterOutUseCaseInPattern;
+        this.adapterOutOfAdapterOutUseCaseIn = adapterOutOfAdapterOutUseCaseIn;
         this.sharedKernel = sharedKernel;
     }
 
@@ -147,8 +152,8 @@ public final class CleanArchitecture implements ArchRule {
     }
 
     @PublicAPI(usage = PublicAPI.Usage.ACCESS)
-    public CleanArchitecture applicationService(String packageIdentifier) {
-        this.applicationServicePackageIdentifier = packageIdentifier;
+    public CleanArchitecture usecaseInteractor(String packageIdentifier) {
+        this.usecaseInteractorPackageIdentifier = packageIdentifier;
         return this;
     }
 
@@ -200,25 +205,11 @@ public final class CleanArchitecture implements ArchRule {
         return this;
     }
 
-    @PublicAPI(usage = PublicAPI.Usage.ACCESS)
-    public CleanArchitecture application(String packageIdentifier) {
-        this.applicationPackageIdentifier = packageIdentifier;
-        return this;
-    }
-
     @PublicAPI(
             usage = PublicAPI.Usage.ACCESS
     )
     public CleanArchitecture supportingService(String... packageIdentifier) {
         this.supportingService = List.of(packageIdentifier);
-        return this;
-    }
-
-    @PublicAPI(
-            usage = PublicAPI.Usage.ACCESS
-    )
-    public CleanArchitecture serviceDecorator(String... packageIdentifer) {
-        this.serviceDecorator = List.of(packageIdentifer);
         return this;
     }
 
@@ -249,8 +240,24 @@ public final class CleanArchitecture implements ArchRule {
     @PublicAPI(
             usage = PublicAPI.Usage.ACCESS
     )
-    public CleanArchitecture adapterOutOfAdapterOutUseCaseInPattern(String... packageIdentifier) {
-        this.adapterOutOfAdapterOutUseCaseInPattern = List.of(packageIdentifier);
+    public CleanArchitecture adapterOutOfAdapterOutUseCaseIn(String... packageIdentifier) {
+        this.adapterOutOfAdapterOutUseCaseIn = List.of(packageIdentifier);
+        return this;
+    }
+
+    @PublicAPI(
+            usage = PublicAPI.Usage.ACCESS
+    )
+    public CleanArchitecture applicationService(String... packageIdentifier) {
+        this.applicationService = List.of(packageIdentifier);
+        return this;
+    }
+
+    @PublicAPI(
+            usage = PublicAPI.Usage.ACCESS
+    )
+    public CleanArchitecture events(String... packageIdentifier) {
+        this.events = List.of(packageIdentifier);
         return this;
     }
 
@@ -288,37 +295,39 @@ public final class CleanArchitecture implements ArchRule {
 
     private Architectures.LayeredArchitecture allRingsArchitecturalExpressive() {
         Architectures.LayeredArchitecture layeredArchitectureDelegate = Architectures.layeredArchitecture()
-                .consideringOnlyDependenciesInLayers()
+                .consideringAllDependencies()
                 .layer(DOMAIN_MODEL).definedBy(this.domainModelPackageIdentifier)
                 .layer(DOMAIN_SERVICE).definedBy(this.domainServicePackageIdentifier)
-                .optionalLayer(APPLICATION_SERVICE).definedBy(this.applicationServicePackageIdentifier)
+                .layer(USECASE_INTERACTOR).definedBy(this.usecaseInteractorPackageIdentifier)
                 .layer(ADAPTER_IN).definedBy(this.adapterInPackageIdentifier)
                 .layer(ADAPTER_OUT).definedBy(this.adapterOutPackageIdentifier)
                 .layer(USECASE_IN).definedBy(this.useCaseInPackageIdentifier)
                 .layer(USECASE_OUT).definedBy(this.useCaseOutPackageIdentifier)
-                .optionalLayer(IGNORED_PACKAGES).definedBy(ignoredPackageIdentifiers.toArray(new String[0]))
                 .optionalLayer(SHARED_OUTPUT_ADAPTER_PATTERN).definedBy(sharedOutputAdapter.toArray(new String[0]))
-                .optionalLayer(SERVICE_DECORATOR_PATTERN).definedBy(serviceDecorator.toArray(new String[0]))
                 .optionalLayer(SUPPORTING_SERVICE_PATTERN).definedBy(supportingService.toArray(new String[0]))
                 .optionalLayer(SHARED_KERNEL_PATTERN).definedBy(sharedKernel.toArray(new String[0]))
-                .optionalLayer(ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN).definedBy(adapterOutOfAdapterOutUseCaseInPattern.toArray(new String[0]))
+                .optionalLayer(ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN).definedBy(adapterOutOfAdapterOutUseCaseIn.toArray(new String[0]))
+                .optionalLayer(EVENTS_PATTERN).definedBy(events.toArray(new String[0]))
+                .optionalLayer(APPLICATION_SERVICE_PATTERN).definedBy(applicationService.toArray(new String[0]))
+                .optionalLayer(IGNORED_PACKAGES).definedBy(ignoredPackageIdentifiers.toArray(new String[0]))
                 .whereLayer(DOMAIN_MODEL).mayOnlyBeAccessedByLayers(
                         DOMAIN_SERVICE,
                         USECASE_OUT,
                         USECASE_IN,
                         ADAPTER_IN,
                         ADAPTER_OUT,
-                        APPLICATION_SERVICE,
-                        IGNORED_PACKAGES,
-                        SHARED_OUTPUT_ADAPTER_PATTERN
-                )
-                .whereLayer(DOMAIN_SERVICE).mayOnlyBeAccessedByLayers(
-                        APPLICATION_SERVICE,
-                        SERVICE_DECORATOR_PATTERN,
+                        USECASE_INTERACTOR,
                         IGNORED_PACKAGES
                 )
-                .whereLayer(APPLICATION_SERVICE).mayOnlyBeAccessedByLayers(
+                .whereLayer(DOMAIN_SERVICE).mayOnlyBeAccessedByLayers(
+                        USECASE_INTERACTOR,
+                        IGNORED_PACKAGES
+                )
+                .whereLayer(USECASE_INTERACTOR).mayOnlyBeAccessedByLayers(
                         USECASE_IN,
+                        USECASE_OUT,
+                        ADAPTER_IN, //erlaubt auch direkte Nutzung des Interactor ohne Use Case => Full Mapping
+                        ADAPTER_OUT, //erlaubt Nutzung eines Interactors, was nicht sinnvoll ist => Full Mapping
                         IGNORED_PACKAGES
                 )
                 .whereLayer(ADAPTER_IN).mayOnlyBeAccessedByLayers(
@@ -329,15 +338,15 @@ public final class CleanArchitecture implements ArchRule {
                 )
                 .whereLayer(USECASE_IN).mayOnlyBeAccessedByLayers(
                         ADAPTER_IN,
-                        APPLICATION_SERVICE,
-                        DOMAIN_SERVICE,
+                        USECASE_INTERACTOR,
                         IGNORED_PACKAGES,
-                        ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN
+                        ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN,
+                        EVENTS_PATTERN,
+                        APPLICATION_SERVICE_PATTERN
                 )
                 .whereLayer(USECASE_OUT).mayOnlyBeAccessedByLayers(
                         ADAPTER_OUT,
-                        DOMAIN_SERVICE,
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         SHARED_OUTPUT_ADAPTER_PATTERN,
                         IGNORED_PACKAGES
                 )
@@ -345,7 +354,7 @@ public final class CleanArchitecture implements ArchRule {
                         IGNORED_PACKAGES
                 )
                 .whereLayer(SUPPORTING_SERVICE_PATTERN).mayOnlyBeAccessedByLayers(
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         DOMAIN_SERVICE,
                         IGNORED_PACKAGES
                 )
@@ -355,13 +364,10 @@ public final class CleanArchitecture implements ArchRule {
                         USECASE_IN,
                         ADAPTER_IN,
                         ADAPTER_OUT,
-                        APPLICATION_SERVICE,
-                        DOMAIN_MODEL,
-                        IGNORED_PACKAGES
+                        USECASE_INTERACTOR,
+                        DOMAIN_MODEL
                 )
                 .withOptionalLayers(true);
-
-        enrichWithIgnoreDependencies(layeredArchitectureDelegate);
 
         return layeredArchitectureDelegate.as(this.getDescription());
     }
@@ -371,45 +377,50 @@ public final class CleanArchitecture implements ArchRule {
                 .consideringOnlyDependenciesInLayers()
                 .layer(DOMAIN_MODEL).definedBy(this.domainModelPackageIdentifier)
                 .layer(DOMAIN_SERVICE).definedBy(this.domainServicePackageIdentifier)
-                .optionalLayer(APPLICATION_SERVICE).definedBy(this.applicationServicePackageIdentifier)
+                .optionalLayer(USECASE_INTERACTOR).definedBy(this.usecaseInteractorPackageIdentifier)
                 .layer(USECASE_IN).definedBy(this.useCaseInPackageIdentifier)
                 .layer(USECASE_OUT).definedBy(this.useCaseOutPackageIdentifier)
                 .layer(ADAPTER).definedBy(this.adapterPackageIdentifier)
                 .optionalLayer(IGNORED_PACKAGES).definedBy(ignoredPackageIdentifiers.toArray(new String[0]))
                 .optionalLayer(SHARED_KERNEL_PATTERN).definedBy(sharedKernel.toArray(new String[0]))
                 .optionalLayer(SHARED_OUTPUT_ADAPTER_PATTERN).definedBy(sharedOutputAdapter.toArray(new String[0]))
-                .optionalLayer(SERVICE_DECORATOR_PATTERN).definedBy(serviceDecorator.toArray(new String[0]))
+                .optionalLayer(ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN).definedBy(adapterOutOfAdapterOutUseCaseIn.toArray(new String[0]))
+                .optionalLayer(EVENTS_PATTERN).definedBy(events.toArray(new String[0]))
                 .optionalLayer(SUPPORTING_SERVICE_PATTERN).definedBy(supportingService.toArray(new String[0]))
-                .optionalLayer(ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN).definedBy(adapterOutOfAdapterOutUseCaseInPattern.toArray(new String[0]))
+                .optionalLayer(ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN).definedBy(adapterOutOfAdapterOutUseCaseIn.toArray(new String[0]))
                 .whereLayer(DOMAIN_MODEL).mayOnlyBeAccessedByLayers(
                         DOMAIN_SERVICE,
                         USECASE_OUT,
                         USECASE_IN,
                         ADAPTER,
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         IGNORED_PACKAGES,
                         SHARED_OUTPUT_ADAPTER_PATTERN
                 )
                 .whereLayer(DOMAIN_SERVICE).mayOnlyBeAccessedByLayers(
-                        APPLICATION_SERVICE,
-                        SERVICE_DECORATOR_PATTERN,
+                        USECASE_INTERACTOR,
                         IGNORED_PACKAGES
                 )
-                .whereLayer(APPLICATION_SERVICE).mayOnlyBeAccessedByLayers(
+                .whereLayer(USECASE_INTERACTOR).mayOnlyBeAccessedByLayers(
                         USECASE_IN,
+                        USECASE_OUT,
+                        ADAPTER_IN,
+                        ADAPTER_OUT,
                         IGNORED_PACKAGES
                 )
                 .whereLayer(USECASE_IN).mayOnlyBeAccessedByLayers(
                         ADAPTER,
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         DOMAIN_SERVICE,
                         IGNORED_PACKAGES,
-                        ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN
+                        ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN,
+                        EVENTS_PATTERN,
+                        APPLICATION_SERVICE_PATTERN
                 )
                 .whereLayer(USECASE_OUT).mayOnlyBeAccessedByLayers(
                         ADAPTER,
                         DOMAIN_SERVICE,
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         SHARED_OUTPUT_ADAPTER_PATTERN,
                         IGNORED_PACKAGES
                 )
@@ -417,7 +428,7 @@ public final class CleanArchitecture implements ArchRule {
                         IGNORED_PACKAGES
                 )
                 .whereLayer(SUPPORTING_SERVICE_PATTERN).mayOnlyBeAccessedByLayers(
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         DOMAIN_SERVICE,
                         IGNORED_PACKAGES
                 )
@@ -426,14 +437,12 @@ public final class CleanArchitecture implements ArchRule {
                         USECASE_OUT,
                         USECASE_IN,
                         ADAPTER,
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         DOMAIN_MODEL,
                         IGNORED_PACKAGES
                 )
                 .withOptionalLayers(true);
 
-        enrichWithIgnoreDependencies(layeredArchitectureDelegate);
-        //enrichWithAdapters(layeredArchitectureDelegate, this.adapterPackageIdentifiers);
         return layeredArchitectureDelegate.as(this.getDescription());
     }
 
@@ -443,25 +452,25 @@ public final class CleanArchitecture implements ArchRule {
                 .layer(DOMAIN_MODEL).definedBy(this.domainModelPackageIdentifier)
                 .layer(DOMAIN_SERVICE).definedBy(this.domainServicePackageIdentifier)
                 .layer(ADAPTER).definedBy(this.adapterPackageIdentifier)
-                .optionalLayer(APPLICATION_SERVICE).definedBy(this.applicationServicePackageIdentifier)
+                .optionalLayer(USECASE_INTERACTOR).definedBy(this.usecaseInteractorPackageIdentifier)
                 .layer(USECASE).definedBy(this.useCasePackageIdentifier)
                 .optionalLayer(IGNORED_PACKAGES).definedBy(ignoredPackageIdentifiers.toArray(new String[0]))
                 .optionalLayer(SHARED_KERNEL_PATTERN).definedBy(sharedKernel.toArray(new String[0]))
                 .optionalLayer(SHARED_OUTPUT_ADAPTER_PATTERN).definedBy(sharedOutputAdapter.toArray(new String[0]))
-                .optionalLayer(SERVICE_DECORATOR_PATTERN).definedBy(serviceDecorator.toArray(new String[0]))
+                .optionalLayer(ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN).definedBy(adapterOutOfAdapterOutUseCaseIn.toArray(new String[0]))
+                .optionalLayer(EVENTS_PATTERN).definedBy(events.toArray(new String[0]))
                 .optionalLayer(SUPPORTING_SERVICE_PATTERN).definedBy(supportingService.toArray(new String[0]))
-                .optionalLayer(ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN).definedBy(adapterOutOfAdapterOutUseCaseInPattern.toArray(new String[0]))
+                .optionalLayer(ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN).definedBy(adapterOutOfAdapterOutUseCaseIn.toArray(new String[0]))
                 .whereLayer(DOMAIN_MODEL).mayOnlyBeAccessedByLayers(
                         DOMAIN_SERVICE,
                         USECASE,
                         ADAPTER,
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         IGNORED_PACKAGES,
                         SHARED_OUTPUT_ADAPTER_PATTERN
                 )
                 .whereLayer(DOMAIN_SERVICE).mayOnlyBeAccessedByLayers(
-                        APPLICATION_SERVICE,
-                        SERVICE_DECORATOR_PATTERN,
+                        USECASE_INTERACTOR,
                         IGNORED_PACKAGES
                 )
                 .whereLayer(SHARED_OUTPUT_ADAPTER_PATTERN).mayOnlyBeAccessedByLayers(
@@ -469,17 +478,20 @@ public final class CleanArchitecture implements ArchRule {
                         DOMAIN_MODEL,
                         IGNORED_PACKAGES
                 )
-                .whereLayer(APPLICATION_SERVICE).mayOnlyBeAccessedByLayers(
+                .whereLayer(USECASE_INTERACTOR).mayOnlyBeAccessedByLayers(
                         USECASE,
+                        ADAPTER,
                         IGNORED_PACKAGES
                 )
                 .whereLayer(USECASE).mayOnlyBeAccessedByLayers(
                         ADAPTER,
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         DOMAIN_SERVICE,
                         IGNORED_PACKAGES,
                         ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN,
-                        SHARED_OUTPUT_ADAPTER_PATTERN
+                        SHARED_OUTPUT_ADAPTER_PATTERN,
+                        EVENTS_PATTERN,
+                        APPLICATION_SERVICE_PATTERN
                 )
                 .whereLayer(SHARED_OUTPUT_ADAPTER_PATTERN).mayOnlyBeAccessedByLayers(
                         USECASE,
@@ -487,7 +499,7 @@ public final class CleanArchitecture implements ArchRule {
                         IGNORED_PACKAGES
                 )
                 .whereLayer(SUPPORTING_SERVICE_PATTERN).mayOnlyBeAccessedByLayers(
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         DOMAIN_SERVICE,
                         IGNORED_PACKAGES
                 )
@@ -495,14 +507,12 @@ public final class CleanArchitecture implements ArchRule {
                         DOMAIN_SERVICE,
                         USECASE,
                         ADAPTER,
-                        APPLICATION_SERVICE,
+                        USECASE_INTERACTOR,
                         DOMAIN_MODEL,
                         IGNORED_PACKAGES
                 )
                 .withOptionalLayers(true);
 
-        enrichWithIgnoreDependencies(layeredArchitectureDelegate);
-        //enrichWithAdapters(layeredArchitectureDelegate, this.adapterPackageIdentifiers);
         return layeredArchitectureDelegate.as(this.getDescription());
     }
 
@@ -510,7 +520,6 @@ public final class CleanArchitecture implements ArchRule {
         Architectures.LayeredArchitecture layeredArchitectureDelegate = Architectures.layeredArchitecture()
                 .consideringOnlyDependenciesInLayers()
                 .layer(DOMAIN).definedBy(this.domainPackageIdentifier)
-                .optionalLayer(APPLICATION).definedBy(this.applicationPackageIdentifier)
                 .layer(USECASE).definedBy(this.useCasePackageIdentifier)
                 .layer(ADAPTER).definedBy(this.adapterPackageIdentifier)
                 .optionalLayer(IGNORED_PACKAGES).definedBy(ignoredPackageIdentifiers.toArray(new String[0]))
@@ -520,17 +529,11 @@ public final class CleanArchitecture implements ArchRule {
                 .whereLayer(DOMAIN).mayOnlyBeAccessedByLayers(
                         USECASE,
                         ADAPTER,
-                        APPLICATION,
                         IGNORED_PACKAGES,
                         SHARED_OUTPUT_ADAPTER_PATTERN
                 )
-                .whereLayer(APPLICATION).mayOnlyBeAccessedByLayers(
-                        USECASE,
-                        IGNORED_PACKAGES
-                )
                 .whereLayer(USECASE).mayOnlyBeAccessedByLayers(
                         ADAPTER,
-                        APPLICATION,
                         DOMAIN,
                         IGNORED_PACKAGES,
                         SHARED_OUTPUT_ADAPTER_PATTERN
@@ -542,7 +545,6 @@ public final class CleanArchitecture implements ArchRule {
                         IGNORED_PACKAGES
                 )
                 .whereLayer(SUPPORTING_SERVICE_PATTERN).mayOnlyBeAccessedByLayers(
-                        APPLICATION,
                         DOMAIN,
                         IGNORED_PACKAGES
                 )
@@ -550,21 +552,11 @@ public final class CleanArchitecture implements ArchRule {
                         DOMAIN,
                         USECASE,
                         ADAPTER,
-                        APPLICATION,
                         IGNORED_PACKAGES
                 )
                 .withOptionalLayers(true);
 
-        enrichWithIgnoreDependencies(layeredArchitectureDelegate);
         return layeredArchitectureDelegate.as(this.getDescription());
-    }
-
-    private void enrichWithIgnoreDependencies(Architectures.LayeredArchitecture layeredArchitectureDelegate) {
-        Iterator var2;
-        IgnoredDependency ignoredDependency;
-        for (var2 = this.ignoredDependencies.iterator(); var2.hasNext(); layeredArchitectureDelegate = ignoredDependency.ignoreFor(layeredArchitectureDelegate)) {
-            ignoredDependency = (IgnoredDependency) var2.next();
-        }
     }
 
     private void enrichWithAdapters(Architectures.LayeredArchitecture layeredArchitectureDelegate, Map<String, String> packageIdentifiers) {
@@ -612,7 +604,7 @@ public final class CleanArchitecture implements ArchRule {
                 Optional.of(newDescription),
                 domainModelPackageIdentifier,
                 domainServicePackageIdentifier,
-                applicationServicePackageIdentifier,
+                usecaseInteractorPackageIdentifier,
                 adapterInPackageIdentifier,
                 adapterOutPackageIdentifier,
                 useCaseInPackageIdentifier,
@@ -620,16 +612,14 @@ public final class CleanArchitecture implements ArchRule {
                 useCasePackageIdentifier,
                 adapterPackageIdentifier,
                 domainPackageIdentifier,
-                applicationPackageIdentifier,
                 adapterPackageIdentifiers,
                 optionalLayers,
                 allRingsDeepCheck,
                 ignoredDependencies,
                 sharedOutputAdapter,
                 ignoredPackageIdentifiers,
-                serviceDecorator,
                 supportingService,
-                adapterOutOfAdapterOutUseCaseInPattern,
+                adapterOutOfAdapterOutUseCaseIn,
                 sharedKernel);
     }
 
