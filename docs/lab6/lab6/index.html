@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://github.com/MatthiasEschhold/hexagonal-and-clean-architecture-training/docs/lab6/lab6/">
       
       
+        <link rel="prev" href="../../lab5/lab5/">
+      
+      
+        <link rel="next" href="../../help/git/">
       
       
       <link rel="icon" href="../../img/logo.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Aufgabe 6 Automatiserte Governance mittels Fitness Functions für strukturelle Qualität - hexagonal-and-clean-architecture-training</title>
+        <title>Aufgabe 6 Automatisierte Governance mittels Fitness Functions - hexagonal-and-clean-architecture-training</title>
       
     
     
@@ -97,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Aufgabe 6 Automatiserte Governance mittels Fitness Functions für strukturelle Qualität
+              Aufgabe 6 Automatisierte Governance mittels Fitness Functions
             
           </span>
         </div>
@@ -367,6 +371,93 @@
       
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe 6 Automatisierte Governance mittels Fitness Functions
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aufgabe 6 Automatisierte Governance mittels Fitness Functions
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lernziele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lernziele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgabe-61-archunit-clean-architecture-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aufgabe 6.1 ArchUnit Clean Architecture Template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aufgabe-62-archunit-boardmittel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aufgabe 6.2 ArchUnit Boardmittel
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     <li class="md-nav__item">
@@ -419,81 +510,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#aufgabe-50-fachliche-modularisierung" class="md-nav__link">
+  <a href="#aufgabe-61-archunit-clean-architecture-template" class="md-nav__link">
     <span class="md-ellipsis">
-      Aufgabe 5.0 Fachliche Modularisierung
+      Aufgabe 6.1 ArchUnit Clean Architecture Template
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#aufgabe-51-anwendungsfall-werkstattauftrag-anlegen" class="md-nav__link">
+  <a href="#aufgabe-62-archunit-boardmittel" class="md-nav__link">
     <span class="md-ellipsis">
-      Aufgabe 5.1 Anwendungsfall Werkstattauftrag anlegen
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aufgabe 5.1 Anwendungsfall Werkstattauftrag anlegen">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schnittstellenbeschreibung-fahrzeugdaten-abfragen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schnittstellenbeschreibung Fahrzeugdaten abfragen
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Schnittstellenbeschreibung Fahrzeugdaten abfragen">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#fahrzeugdaten-die-im-werkstattauftrag-benotigt-werden" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fahrzeugdaten die im Werkstattauftrag benötigt werden
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aufgabe-52-anwendungsfall-fahrzeugstammdaten-abfragen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aufgabe 5.2 Anwendungsfall Fahrzeugstammdaten abfragen
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Aufgabe 5.2 Anwendungsfall Fahrzeugstammdaten abfragen">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#schnittstellenbeschreibung" class="md-nav__link">
-    <span class="md-ellipsis">
-      Schnittstellenbeschreibung
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#aufgabe-53-weitere-muster-fur-abhangigkeiten-zwischen-domain-modules" class="md-nav__link">
-    <span class="md-ellipsis">
-      Aufgabe 5.3 Weitere Muster für Abhängigkeiten zwischen Domain Modules
+      Aufgabe 6.2 ArchUnit Boardmittel
     </span>
   </a>
   
@@ -561,106 +589,734 @@
 -->
 
 <!---->
-<!--<h1>Aufgabe 6 Automatiserte Governance mittels Fitness Functions für strukturelle Qualität</h1>-->
+<!--<h1>Aufgabe 6 Automatisierte Governance mittels Fitness Functions</h1>-->
 <!---->
 
 <!-- Page content -->
-<h1 id="aufgabe-6-automatiserte-governance-mittels-fitness-functions-fur-strukturelle-qualitat">Aufgabe 6 Automatiserte Governance mittels Fitness Functions für strukturelle Qualität<a class="headerlink" href="#aufgabe-6-automatiserte-governance-mittels-fitness-functions-fur-strukturelle-qualitat" title="Permanent link">⚓︎</a></h1>
+<h1 id="aufgabe-6-automatisierte-governance-mittels-fitness-functions">Aufgabe 6 Automatisierte Governance mittels Fitness Functions<a class="headerlink" href="#aufgabe-6-automatisierte-governance-mittels-fitness-functions" title="Permanent link">⚓︎</a></h1>
 <h2 id="lernziele">Lernziele<a class="headerlink" href="#lernziele" title="Permanent link">⚓︎</a></h2>
 <ul>
 <li>Strukturtest in der Clean Architecture verstehen und anwenden</li>
 <li>ArchUnit als leichtgewichtiges Tool für Fitness Functions der strukturellen Qualität</li>
-<li></li>
 </ul>
-<h2 id="aufgabe-50-fachliche-modularisierung">Aufgabe 5.0 Fachliche Modularisierung<a class="headerlink" href="#aufgabe-50-fachliche-modularisierung" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li>Betrachte die Module GarageOrder und SpareParts</li>
-</ul>
-<h2 id="aufgabe-51-anwendungsfall-werkstattauftrag-anlegen">Aufgabe 5.1 Anwendungsfall Werkstattauftrag anlegen<a class="headerlink" href="#aufgabe-51-anwendungsfall-werkstattauftrag-anlegen" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li>Für die Anlage eines Werkstattauftrags im Modul <em>GarageOrder</em> werden die <em>Vin</em>, 
-das <em>Kennzeichen (LicensePlate)</em> und der aktuelle <em>Kilometerstand (Mileage)</em> des Fahrzeugs benötigt</li>
-<li>Die Abfrage muss anhand des <em>Kennzeichens</em> oder der <em>Fahrgestellnummer</em> möglich sein</li>
-<li>Implementiere ein Muster deiner Wahl, um die Abhängigkeit zwischen dem Domain Module 
-<em>GarageOrder</em> und dem Domain Module  <em>Vehicle</em> zu implementieren</li>
-</ul>
-<h3 id="schnittstellenbeschreibung-fahrzeugdaten-abfragen">Schnittstellenbeschreibung Fahrzeugdaten abfragen<a class="headerlink" href="#schnittstellenbeschreibung-fahrzeugdaten-abfragen" title="Permanent link">⚓︎</a></h3>
-<table>
-<thead>
-<tr>
-<th>Schnittstellenelement</th>
-<th>Domänenobjekte</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Parameter</td>
-<td>Vin</td>
-</tr>
-<tr>
-<td>Rückgabe</td>
-<td>VehicleData</td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>Schnittstellenelement</th>
-<th>Domänenobjekte</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Parameter</td>
-<td>LicensePlate</td>
-</tr>
-<tr>
-<td>Rückgabe</td>
-<td>VehicleData</td>
-</tr>
-</tbody>
-</table>
-<h4 id="fahrzeugdaten-die-im-werkstattauftrag-benotigt-werden">Fahrzeugdaten die im Werkstattauftrag benötigt werden<a class="headerlink" href="#fahrzeugdaten-die-im-werkstattauftrag-benotigt-werden" title="Permanent link">⚓︎</a></h4>
-<div class="highlight"><pre><span></span><code><span class="n">VehicleData</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">licensePlate</span><span class="p">:</span><span class="w"> </span><span class="n">String</span>
-<span class="w">    </span><span class="n">vin</span><span class="p">:</span><span class="w"> </span><span class="n">String</span>
-<span class="w">    </span><span class="n">mileage</span><span class="p">:</span><span class="w"> </span><span class="kt">double</span><span class="w">        </span>
+<h2 id="aufgabe-61-archunit-clean-architecture-template">Aufgabe 6.1 ArchUnit Clean Architecture Template<a class="headerlink" href="#aufgabe-61-archunit-clean-architecture-template" title="Permanent link">⚓︎</a></h2>
+<p>Binde folgenden Code, ohne in verstehen zu wollen, in dein Projekt ein:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.PublicAPI</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.base.DescribedPredicate</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.core.domain.JavaClass</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.core.domain.JavaClasses</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.lang.ArchRule</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.lang.EvaluationResult</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.library.Architectures</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CleanArchitecture</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">ArchRule</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DOMAIN_MODEL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;domain.model&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DOMAIN_SERVICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;domain.service&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">USECASE_INTERACTOR</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;usecase.interactor&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ADAPTER_OUT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;adapter.out&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ADAPTER_IN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;adapter.in&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">USECASE_IN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;usecase.in&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">USECASE_OUT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;usecase.out&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DOMAIN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;domain&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">USECASE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;usecase&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ADAPTER</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;adapter&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">IGNORED_PACKAGES</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ignored.packages&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">//dependency patterns</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">SHARED_KERNEL_PATTERN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;shared.kernel&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;shared.output.adapter&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">SUPPORTING_SERVICE_PATTERN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;supporting.service&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">EVENTS_PATTERN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;events&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;adapter.out.usecase.in&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">APPLICATION_SERVICE_PATTERN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;application.service&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">overriddenDescription</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">domainModelPackageIdentifier</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">domainServicePackageIdentifier</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">usecaseInteractorPackageIdentifier</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">adapterInPackageIdentifier</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">adapterOutPackageIdentifier</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">useCaseInPackageIdentifier</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">useCaseOutPackageIdentifier</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">useCasePackageIdentifier</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">adapterPackageIdentifier</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">domainPackageIdentifier</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">adapterPackageIdentifiers</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//dependency</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sharedOutputAdapter</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">supportingService</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sharedKernel</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">events</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">applicationService</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">optionalLayers</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//check styles</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">allRingsDeepCheck</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">IgnoredDependency</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ignoredDependencies</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ignoredPackageIdentifiers</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">adapterOutOfAdapterOutUseCaseIn</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">//clean arc pattern template</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">CleanArchitectureCheck</span><span class="w"> </span><span class="n">check</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="nf">CleanArchitecture</span><span class="p">(</span><span class="n">CleanArchitectureCheck</span><span class="w"> </span><span class="n">check</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">check</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">check</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">domainModelPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DOMAIN_MODEL</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">domainServicePackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DOMAIN_SERVICE</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">usecaseInteractorPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">USECASE_INTERACTOR</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterInPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADAPTER_IN</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterOutPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADAPTER_OUT</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">useCaseInPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">USECASE_IN</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">useCaseOutPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">USECASE_OUT</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">useCasePackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">USECASE</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">domainPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DOMAIN</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ADAPTER</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterPackageIdentifiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">LinkedHashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">optionalLayers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ignoredDependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">overriddenDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Optional</span><span class="p">.</span><span class="na">empty</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ignoredPackageIdentifiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">sharedOutputAdapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">supportingService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">events</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">applicationService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterOutOfAdapterOutUseCaseIn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">sharedKernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="nf">CleanArchitecture</span><span class="p">(</span><span class="n">CleanArchitectureCheck</span><span class="w"> </span><span class="n">check</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">overriddenDescription</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">domainModelPackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">domainServicePackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">usecaseInteractorPackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">adapterInPackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">adapterOutPackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">useCaseInPackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">useCaseOutPackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">useCasePackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">adapterPackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">String</span><span class="w"> </span><span class="n">domainPackageIdentifier</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">adapterPackageIdentifiers</span><span class="p">,</span>
+<span class="w">                              </span><span class="kt">boolean</span><span class="w"> </span><span class="n">optionalLayers</span><span class="p">,</span>
+<span class="w">                              </span><span class="kt">boolean</span><span class="w"> </span><span class="n">allRingsDeepCheck</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">List</span><span class="o">&lt;</span><span class="n">IgnoredDependency</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ignoredDependencies</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sharedOutputAdapter</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">ignoredPackageIdentifiers</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">supportingService</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">adapterOutOfAdapterOutUseCaseIn</span><span class="p">,</span>
+<span class="w">                              </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">sharedKernel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="n">check</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">overriddenDescription</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">overriddenDescription</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">domainModelPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domainModelPackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">domainServicePackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domainServicePackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">usecaseInteractorPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">usecaseInteractorPackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterInPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adapterInPackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterOutPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adapterOutPackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">useCaseInPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">useCaseInPackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">useCaseOutPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">useCaseOutPackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">useCasePackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">useCasePackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adapterPackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">domainPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">domainPackageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterPackageIdentifiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adapterPackageIdentifiers</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">optionalLayers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">optionalLayers</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">allRingsDeepCheck</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">allRingsDeepCheck</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ignoredDependencies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ignoredDependencies</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">sharedOutputAdapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sharedOutputAdapter</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ignoredPackageIdentifiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ignoredPackageIdentifiers</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">supportingService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">supportingService</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterOutOfAdapterOutUseCaseIn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adapterOutOfAdapterOutUseCaseIn</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">sharedKernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sharedKernel</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">cleanArchitecture</span><span class="p">(</span><span class="n">CleanArchitectureCheck</span><span class="w"> </span><span class="n">check</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="p">(</span><span class="n">check</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">domainModel</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">domainModelPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">domainService</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">domainServicePackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">usecaseInteractor</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">usecaseInteractorPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">adapterIn</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterInPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">adapterOut</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterOutPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">useCaseIn</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">useCaseInPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">useCaseOut</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">useCaseOutPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">useCase</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">useCasePackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">adapter</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">domain</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">domainPackageIdentifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">adapter</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterPackageIdentifiers</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span>
+<span class="w">            </span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">supportingService</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">supportingService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">packageIdentifier</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span>
+<span class="w">            </span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">sharedOutputAdapter</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">sharedOutputAdapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">packageIdentifier</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span>
+<span class="w">            </span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">sharedKernel</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">sharedKernel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">packageIdentifier</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span>
+<span class="w">            </span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">ignore</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ignoredPackageIdentifiers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">packageIdentifier</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span>
+<span class="w">            </span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">adapterOutOfAdapterOutUseCaseIn</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">adapterOutOfAdapterOutUseCaseIn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">packageIdentifier</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span>
+<span class="w">            </span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">applicationService</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">applicationService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">packageIdentifier</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span>
+<span class="w">            </span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">events</span><span class="p">(</span><span class="n">String</span><span class="p">...</span><span class="w"> </span><span class="n">packageIdentifier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">events</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">List</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">packageIdentifier</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">ignoreDependency</span><span class="p">(</span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">ignoreDependency</span><span class="p">(</span><span class="n">JavaClass</span><span class="p">.</span><span class="na">Predicates</span><span class="p">.</span><span class="na">equivalentTo</span><span class="p">(</span><span class="n">origin</span><span class="p">),</span><span class="w"> </span><span class="n">JavaClass</span><span class="p">.</span><span class="na">Predicates</span><span class="p">.</span><span class="na">equivalentTo</span><span class="p">(</span><span class="n">target</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span>
+<span class="w">            </span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">ignoreDependency</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">ignoreDependency</span><span class="p">(</span><span class="n">com</span><span class="p">.</span><span class="na">tngtech</span><span class="p">.</span><span class="na">archunit</span><span class="p">.</span><span class="na">core</span><span class="p">.</span><span class="na">domain</span><span class="p">.</span><span class="na">properties</span><span class="p">.</span><span class="na">HasName</span><span class="p">.</span><span class="na">Predicates</span><span class="p">.</span><span class="na">name</span><span class="p">(</span><span class="n">origin</span><span class="p">),</span><span class="w"> </span><span class="n">com</span><span class="p">.</span><span class="na">tngtech</span><span class="p">.</span><span class="na">archunit</span><span class="p">.</span><span class="na">core</span><span class="p">.</span><span class="na">domain</span><span class="p">.</span><span class="na">properties</span><span class="p">.</span><span class="na">HasName</span><span class="p">.</span><span class="na">Predicates</span><span class="p">.</span><span class="na">name</span><span class="p">(</span><span class="n">target</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@PublicAPI</span><span class="p">(</span>
+<span class="w">            </span><span class="n">usage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PublicAPI</span><span class="p">.</span><span class="na">Usage</span><span class="p">.</span><span class="na">ACCESS</span>
+<span class="w">    </span><span class="p">)</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">ignoreDependency</span><span class="p">(</span><span class="n">DescribedPredicate</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">JavaClass</span><span class="o">&gt;</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">DescribedPredicate</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">JavaClass</span><span class="o">&gt;</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">ignoredDependencies</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">IgnoredDependency</span><span class="p">(</span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">target</span><span class="p">));</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="nf">layeredArchitectureDelegate</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">check</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CleanArchitectureCheck</span><span class="p">.</span><span class="na">RINGS_AS_LAYERS</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">ringsAsLayers</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">check</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CleanArchitectureCheck</span><span class="p">.</span><span class="na">DOMAIN_AND_USECASE_RING_ARCHITECTURAL_EXPRESSIVE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">domainRingAndUseCaseRingArchitecturalExpressive</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">check</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">CleanArchitectureCheck</span><span class="p">.</span><span class="na">DOMAIN_RING_ARCHITECTURAL_EXPRESSIVE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">domainRingArchitecturalExpressive</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">allRingsArchitecturalExpressive</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="nf">allRingsArchitecturalExpressive</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Architectures</span><span class="p">.</span><span class="na">layeredArchitecture</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">consideringAllDependencies</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">DOMAIN_MODEL</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">domainModelPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">DOMAIN_SERVICE</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">domainServicePackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">USECASE_INTERACTOR</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">usecaseInteractorPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">ADAPTER_IN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">adapterInPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">ADAPTER_OUT</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">adapterOutPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">USECASE_IN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">useCaseInPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">USECASE_OUT</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">useCaseOutPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">sharedOutputAdapter</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SUPPORTING_SERVICE_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">supportingService</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SHARED_KERNEL_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">sharedKernel</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">adapterOutOfAdapterOutUseCaseIn</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">EVENTS_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">events</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">APPLICATION_SERVICE_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">applicationService</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">IGNORED_PACKAGES</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">ignoredPackageIdentifiers</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">DOMAIN_MODEL</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">DOMAIN_SERVICE</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">USECASE_INTERACTOR</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_IN</span><span class="p">,</span><span class="w"> </span><span class="c1">//erlaubt auch direkte Nutzung des Interactor ohne Use Case =&gt; Full Mapping</span>
+<span class="w">                        </span><span class="n">ADAPTER_OUT</span><span class="p">,</span><span class="w"> </span><span class="c1">//erlaubt Nutzung eines Interactors, was nicht sinnvoll ist =&gt; Full Mapping</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">ADAPTER_IN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">ADAPTER_OUT</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">USECASE_IN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">ADAPTER_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">EVENTS_PATTERN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">APPLICATION_SERVICE_PATTERN</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">USECASE_OUT</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">ADAPTER_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SUPPORTING_SERVICE_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SHARED_KERNEL_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_MODEL</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">withOptionalLayers</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="p">.</span><span class="na">as</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getDescription</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="nf">domainRingAndUseCaseRingArchitecturalExpressive</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Architectures</span><span class="p">.</span><span class="na">layeredArchitecture</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">consideringOnlyDependenciesInLayers</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">DOMAIN_MODEL</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">domainModelPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">DOMAIN_SERVICE</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">domainServicePackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">USECASE_INTERACTOR</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">usecaseInteractorPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">USECASE_IN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">useCaseInPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">USECASE_OUT</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">useCaseOutPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">ADAPTER</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">adapterPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">IGNORED_PACKAGES</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">ignoredPackageIdentifiers</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SHARED_KERNEL_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">sharedKernel</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">sharedOutputAdapter</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">adapterOutOfAdapterOutUseCaseIn</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">EVENTS_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">events</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SUPPORTING_SERVICE_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">supportingService</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">adapterOutOfAdapterOutUseCaseIn</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">DOMAIN_MODEL</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">DOMAIN_SERVICE</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">USECASE_INTERACTOR</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">USECASE_IN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">EVENTS_PATTERN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">APPLICATION_SERVICE_PATTERN</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">USECASE_OUT</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SUPPORTING_SERVICE_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SHARED_KERNEL_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_OUT</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_IN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_MODEL</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">withOptionalLayers</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="p">.</span><span class="na">as</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getDescription</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="nf">domainRingArchitecturalExpressive</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Architectures</span><span class="p">.</span><span class="na">layeredArchitecture</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">consideringOnlyDependenciesInLayers</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">DOMAIN_MODEL</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">domainModelPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">DOMAIN_SERVICE</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">domainServicePackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">ADAPTER</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">adapterPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">USECASE_INTERACTOR</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">usecaseInteractorPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">USECASE</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">useCasePackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">IGNORED_PACKAGES</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">ignoredPackageIdentifiers</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SHARED_KERNEL_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">sharedKernel</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">sharedOutputAdapter</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">adapterOutOfAdapterOutUseCaseIn</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">EVENTS_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">events</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SUPPORTING_SERVICE_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">supportingService</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">adapterOutOfAdapterOutUseCaseIn</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">DOMAIN_MODEL</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">DOMAIN_SERVICE</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_MODEL</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">USECASE_INTERACTOR</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">USECASE</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER_OUT_OF_ADAPTER_OUT_USE_CASE_IN_PATTERN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">EVENTS_PATTERN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">APPLICATION_SERVICE_PATTERN</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_MODEL</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SUPPORTING_SERVICE_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SHARED_KERNEL_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">DOMAIN_SERVICE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE_INTERACTOR</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN_MODEL</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">withOptionalLayers</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="p">.</span><span class="na">as</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getDescription</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="nf">ringsAsLayers</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Architectures</span><span class="p">.</span><span class="na">layeredArchitecture</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">consideringOnlyDependenciesInLayers</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">DOMAIN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">domainPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">USECASE</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">useCasePackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">ADAPTER</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">adapterPackageIdentifier</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">IGNORED_PACKAGES</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">ignoredPackageIdentifiers</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">sharedOutputAdapter</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SHARED_KERNEL_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">sharedKernel</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">optionalLayer</span><span class="p">(</span><span class="n">SUPPORTING_SERVICE_PATTERN</span><span class="p">).</span><span class="na">definedBy</span><span class="p">(</span><span class="n">supportingService</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">DOMAIN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">USECASE</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">ADAPTER</span><span class="p">).</span><span class="na">mayNotBeAccessedByAnyLayer</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SHARED_OUTPUT_ADAPTER_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">USECASE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">DOMAIN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SUPPORTING_SERVICE_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">DOMAIN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">SHARED_KERNEL_PATTERN</span><span class="p">).</span><span class="na">mayOnlyBeAccessedByLayers</span><span class="p">(</span>
+<span class="w">                        </span><span class="n">DOMAIN</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">USECASE</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">ADAPTER</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">IGNORED_PACKAGES</span>
+<span class="w">                </span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">withOptionalLayers</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="p">.</span><span class="na">as</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">getDescription</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">enrichWithAdapters</span><span class="p">(</span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="p">,</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">packageIdentifiers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Iterator</span><span class="w"> </span><span class="n">var2</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="w"> </span><span class="n">adapter</span><span class="p">;</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">adapterLayer</span><span class="p">;</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">var2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">packageIdentifiers</span><span class="p">.</span><span class="na">entrySet</span><span class="p">().</span><span class="na">iterator</span><span class="p">();</span><span class="w"> </span><span class="n">var2</span><span class="p">.</span><span class="na">hasNext</span><span class="p">();</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">layeredArchitectureDelegate</span><span class="p">.</span><span class="na">layer</span><span class="p">(</span><span class="n">adapterLayer</span><span class="p">).</span><span class="na">definedBy</span><span class="p">((</span><span class="n">String</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="n">adapter</span><span class="p">.</span><span class="na">getValue</span><span class="p">()).</span><span class="na">whereLayer</span><span class="p">(</span><span class="n">adapterLayer</span><span class="p">).</span><span class="na">mayNotBeAccessedByAnyLayer</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">adapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Map</span><span class="p">.</span><span class="na">Entry</span><span class="p">)</span><span class="w"> </span><span class="n">var2</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="w">            </span><span class="n">adapterLayer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">getAdapterLayer</span><span class="p">((</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">adapter</span><span class="p">.</span><span class="na">getKey</span><span class="p">());</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="nf">concatenateAll</span><span class="p">(</span><span class="n">Collection</span><span class="o">&lt;</span><span class="n">String</span><span class="o">[]&gt;</span><span class="w"> </span><span class="n">arrays</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">resultList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Iterator</span><span class="w"> </span><span class="n">var3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrays</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
+
+<span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">var3</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="n">var3</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+<span class="w">            </span><span class="n">resultList</span><span class="p">.</span><span class="na">addAll</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">array</span><span class="p">));</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="p">)</span><span class="w"> </span><span class="n">resultList</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getAdapterLayer</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;adapter&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">check</span><span class="p">(</span><span class="n">JavaClasses</span><span class="w"> </span><span class="n">classes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">layeredArchitectureDelegate</span><span class="p">().</span><span class="na">check</span><span class="p">(</span><span class="n">classes</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ArchRule</span><span class="w"> </span><span class="nf">because</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">reason</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Factory</span><span class="p">.</span><span class="na">withBecause</span><span class="p">(</span><span class="k">this</span><span class="p">,</span><span class="w"> </span><span class="n">reason</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ArchRule</span><span class="w"> </span><span class="nf">allowEmptyShould</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">allowEmptyShould</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">optionalLayers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">allowEmptyShould</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="nf">as</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">newDescription</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">check</span><span class="p">,</span>
+<span class="w">                </span><span class="n">Optional</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">newDescription</span><span class="p">),</span>
+<span class="w">                </span><span class="n">domainModelPackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">domainServicePackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">usecaseInteractorPackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">adapterInPackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">adapterOutPackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">useCaseInPackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">useCaseOutPackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">useCasePackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">adapterPackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">domainPackageIdentifier</span><span class="p">,</span>
+<span class="w">                </span><span class="n">adapterPackageIdentifiers</span><span class="p">,</span>
+<span class="w">                </span><span class="n">optionalLayers</span><span class="p">,</span>
+<span class="w">                </span><span class="n">allRingsDeepCheck</span><span class="p">,</span>
+<span class="w">                </span><span class="n">ignoredDependencies</span><span class="p">,</span>
+<span class="w">                </span><span class="n">sharedOutputAdapter</span><span class="p">,</span>
+<span class="w">                </span><span class="n">ignoredPackageIdentifiers</span><span class="p">,</span>
+<span class="w">                </span><span class="n">supportingService</span><span class="p">,</span>
+<span class="w">                </span><span class="n">adapterOutOfAdapterOutUseCaseIn</span><span class="p">,</span>
+<span class="w">                </span><span class="n">sharedKernel</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">EvaluationResult</span><span class="w"> </span><span class="nf">evaluate</span><span class="p">(</span><span class="n">JavaClasses</span><span class="w"> </span><span class="n">classes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">layeredArchitectureDelegate</span><span class="p">().</span><span class="na">evaluate</span><span class="p">(</span><span class="n">classes</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getDescription</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">overriddenDescription</span><span class="p">.</span><span class="na">isPresent</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">overriddenDescription</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Clean architecture fitness function in mode &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">check</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">class</span> <span class="nc">IgnoredDependency</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">DescribedPredicate</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">JavaClass</span><span class="o">&gt;</span><span class="w"> </span><span class="n">origin</span><span class="p">;</span>
+<span class="w">        </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">DescribedPredicate</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">JavaClass</span><span class="o">&gt;</span><span class="w"> </span><span class="n">target</span><span class="p">;</span>
+
+<span class="w">        </span><span class="n">IgnoredDependency</span><span class="p">(</span><span class="n">DescribedPredicate</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">JavaClass</span><span class="o">&gt;</span><span class="w"> </span><span class="n">origin</span><span class="p">,</span><span class="w"> </span><span class="n">DescribedPredicate</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">JavaClass</span><span class="o">&gt;</span><span class="w"> </span><span class="n">target</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">origin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">origin</span><span class="p">;</span>
+<span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">target</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">target</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="nf">ignoreFor</span><span class="p">(</span><span class="n">Architectures</span><span class="p">.</span><span class="na">LayeredArchitecture</span><span class="w"> </span><span class="n">layeredArchitecture</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">layeredArchitecture</span><span class="p">.</span><span class="na">ignoreDependency</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">origin</span><span class="p">,</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">target</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="aufgabe-52-anwendungsfall-fahrzeugstammdaten-abfragen">Aufgabe 5.2 Anwendungsfall Fahrzeugstammdaten abfragen<a class="headerlink" href="#aufgabe-52-anwendungsfall-fahrzeugstammdaten-abfragen" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li>Die Ersatzteileverwaltung (Modul <em>SpareParts</em>) benötigt Fahrzeugstammdaten</li>
-<li>Die Abfrage muss anhand der <em>Fahrgestellnummer</em> möglich sein</li>
-<li>Implementiere ein Muster deiner Wahl, um die Abhängigkeit zwischen dem Domain Module
-  <em>SpareParts</em> und dem Domain Module <em>Vehicle</em> zu implementieren</li>
-</ul>
-<h3 id="schnittstellenbeschreibung">Schnittstellenbeschreibung<a class="headerlink" href="#schnittstellenbeschreibung" title="Permanent link">⚓︎</a></h3>
-<table>
-<thead>
-<tr>
-<th>Schnittstellenelement</th>
-<th>Domänenobjekte</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Parameter</td>
-<td>Vin</td>
-</tr>
-<tr>
-<td>Rückgabe</td>
-<td>VehicleMasterData</td>
-</tr>
-</tbody>
-</table>
-<h2 id="aufgabe-53-weitere-muster-fur-abhangigkeiten-zwischen-domain-modules">Aufgabe 5.3 Weitere Muster für Abhängigkeiten zwischen Domain Modules<a class="headerlink" href="#aufgabe-53-weitere-muster-fur-abhangigkeiten-zwischen-domain-modules" title="Permanent link">⚓︎</a></h2>
-<ul>
-<li>Diskutiere in der Gruppe oder analysiere für dich, wann ein <em>Shared Output Adapter Pattern</em> oder <em>Supporting Service Pattern</em> eine gute alternative sein kann</li>
-</ul>
-<p>Optional:
-- Implementiere die Szenarien 5.1 und 5.2 mit einem  <em>Shared Output Adapter Pattern</em>
-- Implementiere die Szenarien 5.1 und 5.2 mit einem <em>Supporting Service Pattern</em></p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">CleanArchitectureCheck</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ARCHITECTURAL_EXPRESSIVE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DOMAIN_RING_ARCHITECTURAL_EXPRESSIVE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">DOMAIN_AND_USECASE_RING_ARCHITECTURAL_EXPRESSIVE</span><span class="p">,</span>
+<span class="w">    </span><span class="n">RINGS_AS_LAYERS</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.base.HasDescription</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.lang.FailureDisplayFormat</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.lang.FailureMessages</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.lang.Priority</span><span class="p">;</span>
+
+<span class="kn">import static</span><span class="w"> </span><span class="nn">java.lang.System.lineSeparator</span><span class="p">;</span>
+<span class="kn">import static</span><span class="w"> </span><span class="nn">java.util.stream.Collectors.joining</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CustomFailureDisplayFormat</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">FailureDisplayFormat</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">formatFailure</span><span class="p">(</span><span class="n">HasDescription</span><span class="w"> </span><span class="n">rule</span><span class="p">,</span><span class="w"> </span><span class="n">FailureMessages</span><span class="w"> </span><span class="n">failureMessages</span><span class="p">,</span><span class="w"> </span><span class="n">Priority</span><span class="w"> </span><span class="n">priority</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">failureDetails</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">failureMessages</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span>
+<span class="w">                </span><span class="p">.</span><span class="na">map</span><span class="p">(</span><span class="n">message</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">replaceAll</span><span class="p">(</span><span class="s">&quot;&lt;(?:\\w+\\.)+([A-Z][^&gt;]*)&gt;&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&lt;$1&gt;&quot;</span><span class="p">))</span>
+<span class="w">                </span><span class="p">.</span><span class="na">collect</span><span class="p">(</span><span class="n">joining</span><span class="p">(</span><span class="n">lineSeparator</span><span class="p">()));</span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Architecture Violation [Priority: %s] - Rule &#39;%s&#39; was violated (%s):%n%s&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="n">priority</span><span class="p">.</span><span class="na">asString</span><span class="p">(),</span><span class="w"> </span><span class="n">rule</span><span class="p">.</span><span class="na">getDescription</span><span class="p">(),</span><span class="w"> </span><span class="n">failureMessages</span><span class="p">.</span><span class="na">getInformationAboutNumberOfViolations</span><span class="p">(),</span><span class="w"> </span><span class="n">failureDetails</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Binde folgenden Code in dein Projekt ein. Versuche zu verstehen, was hier passiert und führe den Tests aus.
+Zuvor musst du deinen Root Package Name angeben (anstelle von <YOUR ROOT PACKAGE>). Wenn noch nicht vorhandne, muss du ebenfalls
+ArchUnit als Abhängigkeit in deinem Build Tool (Maven/Gradle) hinzufügen.
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.tngtech.archunit<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>archunit-junit5<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>1.2.0<span class="nt">&lt;/version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.core.domain.JavaClasses</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.core.importer.ImportOption</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.junit.AnalyzeClasses</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.tngtech.archunit.junit.ArchTest</span><span class="p">;</span>
+
+<span class="nd">@AnalyzeClasses</span><span class="p">(</span><span class="n">packages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&lt;YOUR ROOT PACKAGE&gt;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="n">importOptions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">ImportOption</span><span class="p">.</span><span class="na">DoNotIncludeTests</span><span class="p">.</span><span class="na">class</span><span class="p">,</span>
+<span class="w">                </span><span class="n">ImportOption</span><span class="p">.</span><span class="na">DoNotIncludeJars</span><span class="p">.</span><span class="na">class</span><span class="p">})</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">CleanArchitectureTemplateTest</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="nd">@ArchTest</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">clean_architecture_fitness_function</span><span class="p">(</span><span class="n">JavaClasses</span><span class="w"> </span><span class="n">classes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">CleanArchitecture</span><span class="w"> </span><span class="n">rule</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CleanArchitecture</span><span class="p">.</span><span class="na">cleanArchitecture</span><span class="p">(</span><span class="n">CleanArchitectureCheck</span><span class="p">.</span><span class="na">ARCHITECTURAL_EXPRESSIVE</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">domainModel</span><span class="p">(</span><span class="s">&quot;..domain.model..&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">domainService</span><span class="p">(</span><span class="s">&quot;..domain.service..&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">adapterIn</span><span class="p">(</span><span class="s">&quot;..adapter.in..&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">adapterOut</span><span class="p">(</span><span class="s">&quot;..adapter.out..&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">usecaseInteractor</span><span class="p">(</span><span class="s">&quot;..usecase.interactor..&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">useCaseIn</span><span class="p">(</span><span class="s">&quot;..usecase.in..&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">useCaseOut</span><span class="p">(</span><span class="s">&quot;..usecase.out..&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">rule</span><span class="p">.</span><span class="na">check</span><span class="p">(</span><span class="n">classes</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="aufgabe-62-archunit-boardmittel">Aufgabe 6.2 ArchUnit Boardmittel<a class="headerlink" href="#aufgabe-62-archunit-boardmittel" title="Permanent link">⚓︎</a></h2>
+<p>Mach dich vertraut mit:
+- <a href="https://www.archunit.org/userguide/html/000_Index.html#_what_to_check">ArchUnit: What to check</a>
+- <a href="https://www.archunit.org/userguide/html/000_Index.html#_layered_architecture">ArchUnit: Layered Architecture</a>
+- <a href="https://www.archunit.org/userguide/html/000_Index.html#_onion_architecture">ArchUnit: Onion Architecture</a></p>
+<p>Implementiere einen ArchUnit Test für eine Prüfungsregeln in der Clean Architecture.</p>
 
 <!-- Source file information -->
 
@@ -690,6 +1346,44 @@ das <em>Kennzeichen (LicensePlate)</em> und der aktuelle <em>Kilometerstand (Mil
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../lab5/lab5/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Aufgabe 5 Fachliche Modularisierung bei Systemwachstum">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Aufgabe 5 Fachliche Modularisierung bei Systemwachstum
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../help/git/" class="md-footer__link md-footer__link--next" aria-label="Next: Git Utils">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Git Utils
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
