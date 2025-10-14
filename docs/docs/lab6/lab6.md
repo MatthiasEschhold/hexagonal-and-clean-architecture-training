@@ -742,5 +742,6 @@ Mach dich vertraut mit:
 - [ArchUnit: What to check](https://www.archunit.org/userguide/html/000_Index.html#_what_to_check)
 - [ArchUnit: Layered Architecture](https://www.archunit.org/userguide/html/000_Index.html#_layered_architecture)
 - [ArchUnit: Onion Architecture](https://www.archunit.org/userguide/html/000_Index.html#_onion_architecture)
+- [ArchUnit: Modularization Rules](https://www.archunit.org/userguide/html/000_Index.html#_modularization_rules)
 
 Implementiere einen ArchUnit Test für eine Prüfungsregeln in der Clean Architecture.
