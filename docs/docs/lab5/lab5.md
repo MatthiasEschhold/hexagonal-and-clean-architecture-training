@@ -60,5 +60,5 @@ VehicleData {
 - Diskutiere in der Gruppe oder analysiere für dich, wann ein _Shared Output Adapter Pattern_ oder _Supporting Service Pattern_ eine gute alternative sein kann
 
 Optional:
-- Implementiere die Szenarien 5.1 und 5.2 mit einem  _Shared Output Adapter Pattern_
+- Implementiere die Szenarien 5.1 und 5.2 mit einem _Shared Output Adapter Pattern_
 - Implementiere die Szenarien 5.1 und 5.2 mit einem _Supporting Service Pattern_
